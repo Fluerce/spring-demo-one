@@ -25,3 +25,24 @@ Using Java 11 - Eclipse - Tomcat 9
 IoC (Inversion of Control) - Outsourcing the construction and managements of objects
 Spring container == ApplicationContext
 Spring Bean == Java Object inside a Spring Container.
+
+Dependency Injection - the client delegates to calls to another project the responsibility of providing its dependecies. (You let your car factory build your car, no need to worry about how it is assembled.)
+two injection types:
+Constructor Injection
+Setter Injection
+Auto Wiring
+
+Tip:
+Ctrl Space = eclipse syntax shortcuts (sysout)
+copy qualified class name = full class name from package
+
+Bean Scopes - refers to the lifecycle of a bean.
+Default of bean scope = Singleton.
+Five Bean Scopes:
+Singleton = one instance created only of the bean, cached in memory and shared in bean
+Prototype = new bean instance for each request
+Request = scoped on web request
+Session = scoped on web session
+Global-session = scoped to global web session
+
+for prototype bean scope, spring does not call the destroy method. you will have to implement DisposableBean and override the destroy method (also throw an execption)
